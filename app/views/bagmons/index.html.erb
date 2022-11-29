@@ -1,0 +1,135 @@
+<head>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  }
+
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main {
+    display: flex; 
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px;
+    gap: 1rem;
+    justify-content: space-around; 
+  }
+
+  .main a {
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+  }
+
+  .card {
+    color: white;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+  }
+
+  .card p {
+    margin-bottom: 5px;
+  }
+
+  .bagmon {
+    width: 100%; height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+
+  .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  }
+
+  .title h1 {
+    color: #0A265D;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  }
+
+  .title p {
+    color: #999;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  }
+
+  .titleText {
+    text-align: center;
+  }
+
+  .buttonArea {
+    position: absolute;
+    right: 8vh;
+    background: #0A265D;
+    color: #fff;
+    padding: 15px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+  }
+
+  .img-box img {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.img-box {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+  </style>
+<head>
+
+<body> 
+  <div class="form-box">
+            <div class="img-box">
+            <img class="imagem3" src="https://bagdex.com.br/wp-content/uploads/2022/09/logo_bagdex_01.png" /> 
+
+<style>
+.imagem3{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.imagem3:hover{
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+</style>
+ <div class='buttonArea'>
+    <%= link_to 'Criar novo Bagmon', new_bagmon_path %>
+  </div>
+  </div>
+
+  <div class="main">
+    <% @bagmons.each do |bagmon| %>
+      <a style='background: <%=bagmon.type.color %>' href='/bagmons/<%= bagmon.id %>'>
+        <div class="card">
+          <div class="bagmon">
+            <%= image_tag bagmon.image, size: "250x250" %>
+          </div>
+          <h2><%= bagmon.name %></h2>
+          <p><%= bagmon.type.name %></p>
+        </div>
+      </a>
+    <% end %>
+  </div>
+  
+</body>

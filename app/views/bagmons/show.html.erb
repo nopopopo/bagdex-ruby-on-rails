@@ -1,0 +1,86 @@
+<head>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .img-tst {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+  }
+
+  .mainImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .btn button {
+    padding: 5px;
+    background-color: #0A265D;
+    color: #000;
+    font-size: 15px;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+  }
+
+  .btn .back-btn {
+    padding: 5px;
+    background-color: #FFD700;
+    color: #000;
+    font-size: 15px;
+    margin-right: 20px;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+  }
+
+  .mainImage p {
+    color: #0A265D;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="mainImage">
+    <p>
+      <img class='img-tst' src=<%= @bagmon.image %> >
+    </p>
+    <h2 style="color: <%= @bagmon.type.color %>">
+      <%= @bagmon.name %>
+    </h2>
+    
+    <p style="margin-top: 5px;">
+      <strong>Numero:</strong>
+      <%= @bagmon.number %>
+    </p>
+    
+    <p style="margin-top: 5px;">
+      <strong>Tipo:</strong>
+      <%= @bagmon.type.name %>
+    </p>
+
+
+  <div class="btn">
+    <button class="back-btn"> <%= link_to 'Voltar', bagmons_path %> </button>
+    <button> <%= link_to 'Editar', edit_bagmon_path(@bagmon) %> </button>
+  </div>
+
+  </div>
+</body>
+
+
