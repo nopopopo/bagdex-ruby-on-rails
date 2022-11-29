@@ -52,4 +52,9 @@ Inicie o servidor
 ```bash
   rails s -b 0.0.0.0
 ```
+Preview
+
+![image](https://user-images.githubusercontent.com/84482264/204673075-27660da8-a96a-41cc-adc7-a3b9004df3ec.png)
+![image](https://user-images.githubusercontent.com/84482264/204673147-d0cfb7bc-d552-47fe-8ee7-5eeeb5399b80.png)
+
 
