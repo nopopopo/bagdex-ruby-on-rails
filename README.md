@@ -14,7 +14,7 @@ projeto bagdex feito em ruby on rails
 - Batalha entre os Bagmons criados.
 
 
-##Clone o projeto
+Clone o projeto
 
 ```bash
   git clone https://github.com/nopopopo/bg.git
@@ -26,7 +26,7 @@ Entre no diretório do projeto
   cd bagdex
 ```
 
-Instale as dependências
+Instalação das dependências
 
 ```bash
   bundle install
