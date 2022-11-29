@@ -1,6 +1,6 @@
-## Bagdex & Ruby on Rails
+## Bagdex em Ruby on Rails
 
-#### Este projeto é uma reprodução da Bagdex, criado em Ruby on Rails.
+projeto bagdex feito em ruby on rails
 
 
 
@@ -14,12 +14,10 @@
 - Batalha entre os Bagmons criados.
 
 
-## Rodando localmente
-
-Clone o projeto
+##Clone o projeto
 
 ```bash
-  git clone https://github.com/woppedwoke/gt.git
+  git clone https://github.com/nopopopo/bg.git
 ```
 
 Entre no diretório do projeto
@@ -55,7 +53,3 @@ Inicie o servidor
   rails s -b 0.0.0.0
 ```
 
-
-## Referência
-
- - [Bagdex](https://bagdex.com.br/)
